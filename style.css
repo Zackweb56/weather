@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000408;
+    font-family: 'Alexandria', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+}
+
+.btn{
+    border: 2px solid #fff;
+    border-radius: 50px;
+    outline: none;
+    margin: 50px 0;
+    padding: 12px 25px;
+    background-color: #c70032;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    animation: wamid 1.5s ease infinite;
+}
+
+.btn:hover{
+    background-color: #00d9ff;
+}
+
+@keyframes wamid {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* ------------------------------ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.progressContainer {
+    position: relative;
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cancel{
+    margin-top: 20%;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 0;
+    background-color: #c70032;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.progressBar {
+    position: absolute;
+    height: 40px;
+    width: 84%;
+    /* background: #00c753; */
+    border-top: 4px solid #00c753;
+    border-radius: 5px;
+    z-index: 1;
+    transform-origin: left;
+    transform: scalex(0%);
+    transition: width 0.5s;
+}
+
+#items{
+    display: block;
+}
+
+.loading, .percent{
+    position: absolute;
+    top: 30px;
+}
+
+.loading{
+    /* float: right; */
+    right: 18px;
+}
+
+.percent{
+    left: 20px;
+}
+
+.text {
+    display: none;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #000408;
+}
